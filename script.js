@@ -50,13 +50,11 @@ page1Animation();
 function page2Animation(){
 
 
-}
-
 var tl2 = gsap.timeline({
     scrollTrigger:{
         trigger: ".section2",
         scroller:"body",
-        markers:true,
+       
         start:"top 50%",
         end:"top 0%",
         scrub:2,
@@ -74,11 +72,28 @@ tl2.from(".elem.line1.left",{
     x:-300,
     opacity:0,
     duration:1,
-})
+},"anim")
 
 tl2.from(".elem.line1.right",{
     x:300,
     opacity:0,
     duration:1,
-})
+},"anim")
 
+tl2.from(".elem.line2.left",{
+    x:-300,
+    opacity:0,
+    duration:1,
+},"anim1")
+
+tl2.from(".elem.line2.right",{
+    x:300,
+    opacity:0,
+    duration:1,
+},"anim1")
+
+
+
+}
+
+page2Animation();
